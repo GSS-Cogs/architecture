@@ -51,5 +51,14 @@ statistical data exchange.</dd>
 * Tidy data: each variable is a column and each observation (or case) is a row
 * JSON metadata describes the table, allows validation and transformation to RDF.
 * CSV2RDF: standardized transform into RDF Data Cube
+* Also use for codelists: foreign key in separate tables, transformed to RDF/SKOS.
 
 ![CSVW dataset](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/GSS-Cogs/architecture/master/dataset-csvw.puml)
+
+## Linked Data
+
+Publishing and/or disseminating data on the web as linked data simply means using URIs:
+* Make the data available as retrievable (HTTP GET) documents at the given URIs.
+* Ensure that these documents are parseable as RDF.
+* Use URIs in the data, e.g. via CSV-W JSON `aboutUrl`, `valueUrl` and `propertyUrl`. CSV-W JSON is a subset of JSON-LD,
+  and the CSV+JSON can be parsed as just another RDF serialization.
