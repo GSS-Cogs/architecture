@@ -1,4 +1,5 @@
 @startuml
+!theme reddress-lightorange
 
 skinparam defaultTextAlignment center
 skinparam noteTextAlignment left

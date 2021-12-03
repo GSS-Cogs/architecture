@@ -1,0 +1,16 @@
+@startuml
+!theme reddress-lightorange
+skinparam defaultTextAlignment center
+skinparam minClassWidth 75
+database datastore [
+    Data Store
+]
+rectangle rap [
+  RAP
+]
+rectangle gov_uk [
+  GOV.UK
+]
+datastore -> rap : export / query
+rap -> gov_uk : Output as PDF\nor HTML
+@enduml

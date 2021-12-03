@@ -1,11 +1,25 @@
-# Disseminating Analysis
+# Disseminating Statistical Analysis
 
 > Use Case: _As a data analyst / statistician, I want to disseminate and/or publish the results of my analysis._
 
+## Reproducible Analytical Pipelines
+
 As we move to using [Reproducible Analytical
-Pipelines](https://gss.civilservice.gov.uk/reproducible-analytical-pipelines/) (RAPs), the typical output from an
-analytical session, for instance using R-Studio / R-Markdown, could be a number Markdown documents along with the
-analysed/aggregated statistical datasets as [tidy](https://vita.had.co.nz/papers/tidy-data.pdf) CSV files.
+Pipelines](https://gss.civilservice.gov.uk/reproducible-analytical-pipelines/) (RAPs), we want to ensure that the output
+from an analytical session, for instance using R-Studio / R-Markdown, comprises of a number Markdown documents along with
+the analysed/aggregated statistical datasets as [tidy](https://vita.had.co.nz/papers/tidy-data.pdf) CSV files.
+
+RAP, as envisioned right now, rightly concentrates more on the "analysis as code" part of the process, using modern
+software development practices to build automated, repeatable pipelines.
+
+The old process of statistics production in Government:
+![old process](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/GSS-Cogs/architecture/master/old-rap.puml)
+
+Using RAP:
+![rap](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/GSS-Cogs/architecture/master/rap.puml)
+
+The outputs envisaged from RAP are PDF / HTML documents, presumably along with Spreadsheets, to be uploaded to a
+document publishing system like gov.uk [Whitehall Publisher](https://www.gov.uk/guidance/how-to-publish-on-gov-uk/introduction-and-access-to-whitehall-publisher).
 
 These output datasets sit alongside the reports and ideally allow the end user to reproduce any data points and charts
 given in the reports.

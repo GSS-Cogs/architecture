@@ -1,0 +1,26 @@
+@startuml
+!theme reddress-lightorange
+skinparam defaultTextAlignment center
+skinparam minClassWidth 75
+database datastore [
+    Data Store
+]
+rectangle stats_software [
+  Statistical
+  Software
+]
+rectangle spreadsheet [
+  Spreadsheet
+]
+rectangle word_processor [
+  Word
+  Processor
+]
+rectangle gov_uk [
+  GOV.UK
+]
+datastore -> stats_software : export
+stats_software -> spreadsheet : Copy and paste
+spreadsheet -> word_processor : Copy and paste
+word_processor -> gov_uk : Output as PDF
+@enduml
