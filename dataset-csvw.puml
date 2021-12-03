@@ -1,0 +1,23 @@
+@startuml
+file csv as "observations.csv
+--
+|= dim1 |= dim2 |= val  |
+| A     | X     | 20.1  |
+| B     | Y     | 12.2  |
+"
+
+file json as "observations.csv-metadata.json
+|_@context
+|_tables
+  |_ url: observations.csv
+  |_ schema/columns:
+    |_ labels
+    |_ validation
+    |_ transformation
+|_ JSON-LD
+  |_ Dataset metadata
+  |_ Data Structure Definition
+    |_ Dimensions local/external
+    |_ Codelists
+"
+@enduml

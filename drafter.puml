@@ -1,0 +1,25 @@
+@startuml
+
+skinparam defaultTextAlignment center
+skinparam noteTextAlignment left
+'left to right direction
+
+node "Publish My Data" {
+  database "Stardog\nRDF\ntriple store"
+  [Drafter]
+}
+() "Drafter\nAPI" -l- Drafter
+
+[Drafter] ..> [Auth0] :auth
+
+note right of "Drafter\nAPI"
+  RESTful API
+  over TLS with RBAC:
+  * Manage draftsets
+  * Update RDF data
+  * Metadata
+  * SPARQL Query
+  * Job management
+end note
+
+@enduml
