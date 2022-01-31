@@ -13,10 +13,10 @@ RAP, as envisioned right now, rightly concentrates more on the "analysis as code
 software development practices to build automated, repeatable pipelines.
 
 The old process of statistics production in Government:
-![old process](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/GSS-Cogs/architecture/master/old-rap.puml)
+![old process](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/GSS-Cogs/architecture/main/analyst-to-dissemination/old-rap.puml)
 
 Using RAP:
-![rap](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/GSS-Cogs/architecture/master/rap.puml)
+![rap](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/GSS-Cogs/architecture/main/analyst-to-dissemination/rap.puml)
 
 The outputs envisaged from RAP are PDF / HTML documents, presumably along with Spreadsheets, to be uploaded to a
 document publishing system like gov.uk [Whitehall Publisher](https://www.gov.uk/guidance/how-to-publish-on-gov-uk/introduction-and-access-to-whitehall-publisher).
@@ -58,7 +58,7 @@ statistical data exchange.</dd>
 * Authorization is via Auth0 (now Okta)
 * Available roles for editing, QA, publishing and admin.
 
-![drafter](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/GSS-Cogs/architecture/master/drafter.puml)
+![drafter](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/GSS-Cogs/architecture/main/analyst-to-dissemination/drafter.puml)
 
 ## CSV on the Web
 
@@ -67,7 +67,7 @@ statistical data exchange.</dd>
 * CSV2RDF: standardized transform into RDF Data Cube
 * Also use for codelists: foreign key in separate tables, transformed to RDF/SKOS.
 
-![CSVW dataset](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/GSS-Cogs/architecture/master/dataset-csvw.puml)
+![CSVW dataset](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/GSS-Cogs/architecture/main/analyst-to-dissemination/dataset-csvw.puml)
 
 ## Linked Data
 
