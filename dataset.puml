@@ -1,0 +1,11 @@
+@startuml
+hide circle
+entity "<color:grey>qb:</color>Dataset" as ds {
+* URI
+--
+* title
+* description
+* issued
+* publisher
+}
+@enduml

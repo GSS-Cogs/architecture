@@ -1,0 +1,37 @@
+@startuml
+!theme spacelab
+skinparam defaultFontName Oswald
+
+skinparam defaultTextAlignment center
+skinparam noteTextAlignment left
+' left to right direction
+
+
+skinparam defaultTextAlignment center
+skinparam noteTextAlignment left
+top to bottom direction
+
+cloud "Web of data" {
+  package data.gov.uk {
+    database PMD
+  }
+  rectangle "x.data.gov.uk" {
+    file CSVW_1 as "CSVW"
+    CSVW_1 --> PMD : pull / index
+  }
+  package Jenkins {
+     queue Transform_1
+     Transform_1 --> PMD
+  }
+  rectangle "gov.uk" {
+    file CSVW_2 as "CSVW"
+    CSVW_2 --> PMD : pull / index
+    file XLS_1 as "Excel"
+    XLS_1 --> Transform_1
+  }
+  interface SPARQL
+'  interface Drafter
+  PMD -() SPARQL
+'  PMD -() Drafter
+}
+@enduml

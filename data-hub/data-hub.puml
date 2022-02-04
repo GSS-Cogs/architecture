@@ -1,0 +1,60 @@
+@startuml
+!theme reddress-lightorange
+
+skinparam defaultTextAlignment center
+skinparam noteTextAlignment left
+' left to right direction
+
+node "data hub" as hub {
+node "Publish My Data" {
+  database "Stardog\nRDF\ntriple store"
+  [Drafter]
+}
+() drafterAPI as "Drafter\nAPI"
+drafterAPI -- Drafter
+
+component dailyPoll as "daily poll\nmetadata"
+database metadata {
+  rectangle Whitehall
+  rectangle ONS
+}
+dailyPoll --> metadata
+metadata -() R2RML
+
+[Drafter] .. [Auth0] :auth
+
+  package gov.uk {
+    component gov_uk_webserver [
+      Trade
+      |_ observations.csv
+      |_ observations.csv-metadata.json
+      |_ bulletin.html
+    ]
+  }
+
+  () gov_uk_http as "HTTP"
+  gov_uk_http -- gov_uk_webserver
+  () gov_uk_atom as "Atom"
+  gov_uk_atom -- gov_uk_webserver
+
+  package ons.gov.uk {
+    component ons_webserver [
+      Economy
+      |_ observations.csv
+      |_ observations.csv-metadata.json
+      |_ bulletin.html
+    ]
+  }
+
+  () ons_http as "HTTP"
+  ons_http -- ons_webserver
+  () ons_rss as "RSS"
+  ons_rss -- ons_webserver
+
+  ons_rss --> dailyPoll
+  gov_uk_atom --> dailyPoll
+
+  component dailyDCAT as "daily DCAT"
+  R2RML )-> dailyDCAT
+  dailyDCAT --( drafterAPI
+@enduml
