@@ -5,7 +5,7 @@ skinparam minClassWidth 75
 database datastore [
     Data Store
 ]
-rectangle rap [
+queue rap [
   RAP
 ]
 rectangle gov_uk [

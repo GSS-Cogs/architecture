@@ -6,7 +6,7 @@
 
 As we move to using [Reproducible Analytical
 Pipelines](https://gss.civilservice.gov.uk/reproducible-analytical-pipelines/) (RAPs), we want to ensure that the output
-from an analytical session, for instance using R-Studio / R-Markdown, comprises of a number Markdown documents along with
+from an analytical session, for instance using R-Studio / R-Markdown, comprises a number Markdown documents along with
 the analysed/aggregated statistical datasets as [tidy](https://vita.had.co.nz/papers/tidy-data.pdf) CSV files.
 
 RAP, as envisioned right now, rightly concentrates more on the "analysis as code" part of the process, using modern

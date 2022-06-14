@@ -3,7 +3,7 @@
 
 skinparam defaultTextAlignment center
 skinparam noteTextAlignment left
-' left to right direction
+left to right direction
 
 node "data hub" as hub {
 node "Publish My Data" {
